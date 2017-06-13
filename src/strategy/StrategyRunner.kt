@@ -1,12 +1,7 @@
 package strategy
 
 fun main(args: Array<String>) {
-    val lowerCasePrinter = Printer(Printer.lowerCaseFormatter)
-    lowerCasePrinter.printString("Make Me LOWERCASE")
+    Printer(Printer.lowerCaseFormatter).apply { printString("Make Me LOWERCASE") }
 
-    val upperCasePrinter = Printer(Printer.upperCaseFormatter)
-    upperCasePrinter.printString("Make Me uppercase")
-
-    val prefixPrinter = Printer({ "Prefix: " + it })
-    prefixPrinter.printString("Add prefix please")
+    Printer(Printer.upperCaseFormatter).apply { printString("Make Me uppercase") }
 }
